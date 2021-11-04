@@ -23,9 +23,11 @@
         }
         return (false);
     }
-
-    document.getElementById("img").src=getQueryVariable('src')
-    document.getElementById("loading").style.display="none"
+    let imgsrc = getQueryVariable('src')
+    if (imgsrc) {
+        document.getElementById("img").src = imgsrc
+        document.getElementById("loading").style.display = "none"
+    }
 </script>
 
 </html>
